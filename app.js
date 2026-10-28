@@ -12,8 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     debitos: [
       { id: 'licenciamento', nome: 'Licenciamento Anual 2026', valor: 168.60, selecionado: false },
-      { id: 'ipva', nome: 'IPVA 2026 - Cota Única', valor: 1250.40, selecionado: false },
-      { id: 'multa', nome: 'Multa por Excesso de Velocidade', valor: 195.23, selecionado: false }
+      { id: 'ipva', nome: 'IPVA 2026 - Cota Única', valor: 1250.40, selecionado: false }
     ],
     pix: {
       status: 'pending',
@@ -437,7 +436,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   function triggerConfirmAndJump() {
-    // Garante valor de Licenciamento (R$ 168,60) se não tiver sido calculado
+
     if (!state.pix.valor || state.pix.valor === 0) {
       state.pix.valor = 168.60;
     }
