@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DETRAN-GO | Consulta e Pagamento de Débitos Veiculares (Protótipo Acadêmico)</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="gov-topbar">
+    <div class="container topbar-content">
+      <div class="topbar-left">
+        <span class="gov-flag">🟩🟨</span>
+        <span class="gov-text">GOVERNO DO ESTADO DE GOIÁS</span>
+      </div>
+      <div class="topbar-right">
+        <span class="badge-academic">PROTÓTIPO ACADÊMICO — FASE 6</span>
+        <span class="topbar-link">Acessibilidade</span>
+        <span class="topbar-link">Contraste</span>
+      </div>
+    </div>
+  </header>
+
+
+  <header class="main-header">
+    <div class="container header-container">
+      <div class="brand-area" id="nav-brand" role="button" tabindex="0" title="Voltar ao início">
+        <div class="detran-logo">
+          <span class="logo-circle">D</span>
+          <div class="logo-text">
+            <strong>DETRAN-GO</strong>
+            <small>Departamento Estadual de Trânsito de Goiás</small>
+          </div>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Navegação Principal">
+        <button class="nav-btn active" id="nav-home-btn" data-screen="view-home">Início</button>
+        <button class="nav-btn" id="nav-veiculos-btn" data-screen="view-home">Veículos</button>
+        <button class="nav-btn" data-screen="view-home">Habilitação</button>
+        <button class="nav-btn" data-screen="view-home">Infrações</button>
+        <button class="nav-btn" data-screen="view-home">Atendimento</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Container Principal das Telas -->  <main class="main-content">
+    <div class="container">
+
+
+      <section id="view-home" class="screen-view active">
+
+        <div class="hero-banner">
+          <div class="hero-text">
+            <h1>Serviços Digitais DETRAN Goiás</h1>
+            <p>Acesse consultas, emissão de documentos e quitação de débitos com rapidez e segurança.</p>
+          </div>
+          <div class="hero-search">
+            <input type="text" placeholder="O que você precisa hoje? (Ex: Débitos, Licenciamento, CNH...)" disabled>
+            <button type="button" aria-label="Buscar serviço">🔍</button>
+          </div>
+        </div>
+
+        <div class="section-title-wrap">
+          <h2>Principais Serviços ao Cidadão</h2>
+          <p>Selecione a categoria desejada para prosseguir:</p>
+        </div>
+
+
+        <div class="services-grid">
+
+          <div class="service-category-card featured">
+            <div class="card-header">
+              <div class="category-icon">🚗</div>
+              <div>
+                <h3>Veículos</h3>
+                <span class="category-badge">Serviços Veiculares</span>
+              </div>
+            </div>
+            <ul class="service-list">
+
+              <li>
+                <button type="button" class="service-action-btn primary-action" id="btn-goto-consulta">
+                  <span class="service-icon">💳</span>
+                  <div class="service-text">
+                    <strong>Consulta e Pagamento de Débitos do Veículo</strong>
+                    <small>Consulte e pague IPVA, Licenciamento Anual e Multas de trânsito pendentes.</small>
+                  </div>
+                  <span class="arrow-indicator">➔</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="service-action-btn" onclick="alert('Opção de exemplo. Para a tarefa, selecione a consulta de débitos.')">
+                  <span class="service-icon">📄</span>
+                  <div class="service-text">
+                    <strong>2ª Via de CRLV Digital</strong>
+                    <small>Emissão do Certificado de Registro e Licenciamento do Veículo</small>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="service-action-btn" onclick="alert('Opção de exemplo. Para a tarefa, selecione a consulta de débitos.')">
+                  <span class="service-icon">🔄</span>
+                  <div class="service-text">
+                    <strong>Transferência de Propriedade</strong>
+                    <small>Abertura de processo de compra e venda de veículo</small>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="service-action-btn" onclick="alert('Opção de exemplo. Para a tarefa, selecione a consulta de débitos.')">
+                  <span class="service-icon">🔍</span>
+                  <div class="service-text">
+                    <strong>Certidão Negativa de Débitos</strong>
+                    <small>Emissão de nada consta de débitos veiculares</small>
+                  </div>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="service-category-card">
+            <div class="card-header">
+              <div class="category-icon">🪪</div>
+              <div>
+                <h3>Habilitação / CNH</h3>
+                <span class="category-badge">Condutor</span>
+              </div>
+            </div>
+            <ul class="service-list">
+              <li>
+                <button type="button" class="service-action-btn" onclick="alert('Serviço de Habilitação. Para a tarefa atual, procure por serviços de débitos veiculares.')">
+                  <span class="service-icon">🪪</span>
+                  <div class="service-text">
+                    <strong>Renovação Simplificada da CNH</strong>
+                    <small>Abertura do processo de renovação periódica</small>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="service-action-btn" onclick="alert('Serviço de Habilitação.')">
+                  <span class="service-icon">📊</span>
+                  <div class="service-text">
+                    <strong>Consulta de Pontuação na CNH</strong>
+                    <small>Verifique os pontos acumulados por infrações</small>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="service-action-btn" onclick="alert('Serviço de Habilitação.')">
+                  <span class="service-icon">🎓</span>
+                  <div class="service-text">
+                    <strong>Primeira Habilitação</strong>
+                    <small>Inscrição e acompanhamento de processo</small>
+                  </div>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+
+          <div class="service-category-card">
+            <div class="card-header">
+              <div class="category-icon">⚠️</div>
+              <div>
+                <h3>Infrações e Recursos</h3>
+                <span class="category-badge">Fiscalização</span>
+              </div>
+            </div>
+            <ul class="service-list">
+              <li>
+                <button type="button" class="service-action-btn" onclick="alert('Para pagar multas integradas a débitos, utilize a Consulta de Débitos em Veículos.')">
+                  <span class="service-icon">📝</span>
+                  <div class="service-text">
+                    <strong>Indicação de Real Condutor Infrator</strong>
+                    <small>Transferência de pontuação de autuação</small>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="service-action-btn" onclick="alert('Para pagar multas integradas a débitos, utilize a Consulta de Débitos em Veículos.')">
+                  <span class="service-icon">⚖️</span>
+                  <div class="service-text">
+                    <strong>Recurso de Multa de Trânsito</strong>
+                    <small>Defesa prévia e recurso à JARI</small>
+                  </div>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+
+
+      <section id="view-consulta" class="screen-view">
+        <nav class="breadcrumbs" aria-label="Navegação estrutural">
+          <button type="button" class="breadcrumb-link" data-goto="view-home">Início</button>
+          <span>&gt;</span>
+          <button type="button" class="breadcrumb-link" data-goto="view-home">Veículos</button>
+          <span>&gt;</span>
+          <span class="breadcrumb-current">Consulta de Débitos</span>
+        </nav>
+
+        <div class="page-card">
+          <div class="page-header">
+            <h2>Consulta de Débitos do Veículo</h2>
+            <p>Preencha os dados abaixo para visualizar o extrato discriminado de pendências financeiras (Licenciamento, IPVA e Multas).</p>
+          </div>
+
+
+          <div class="preset-box">
+            <div class="preset-title">
+              <span class="preset-icon">⚡</span>
+              <strong>Opções Pré-definidas para Teste do Usuário:</strong>
+            </div>
+            <p class="preset-description">
+              Clique em um dos botões abaixo para preencher os campos automaticamente com os dados fictícios do cenário de teste:
+            </p>
+            <div class="preset-actions">
+              <button type="button" class="btn-preset" id="preset-incomplete" title="Placa: ABC1D23 | Renavam: 12345 (Incompleto - 5 dígitos)">
+                <span class="preset-badge badge-warning">Cenário T3</span>
+                Preencher Renavam Incompleto (12345)
+              </button>
+              <button type="button" class="btn-preset primary-preset" id="preset-complete" title="Placa: ABC1D23 | Renavam: 12345678901 (Correto - 11 dígitos)">
+                <span class="preset-badge badge-success">Cenário T3</span>
+                Preencher Renavam Completo (12345678901)
+              </button>
+              <button type="button" class="btn-preset outline-preset" id="preset-clear">
+                🧹 Limpar Campos
+              </button>
+            </div>
+          </div>
+
+
+          <div id="form-error-alert" class="alert-box alert-danger" style="display: none;" role="alert">
+            <div class="alert-icon">⚠️</div>
+            <div class="alert-content">
+              <strong>Renavam Incompleto ou Inválido!</strong>
+              <p id="form-error-msg">O Renavam informado possui menos de 11 dígitos. Por favor, verifique o documento do veículo e digite os 11 números completos para continuar.</p>
+            </div>
+          </div>
+
+
+          <form id="form-consulta-debitos" class="styled-form" novalidate>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="input-placa">
+                  Placa do Veículo <span class="required">*</span>
+                </label>
+                <div class="input-wrapper">
+                  <input 
+                    type="text" 
+                    id="input-placa" 
+                    name="placa" 
+                    placeholder="Ex: ABC1D23" 
+                    maxlength="8" 
+                    autocomplete="off"
+                    required
+                  >
+                  <span class="input-hint">Padrão Mercosul (ABC1D23) ou antigo (ABC-1234)</span>
+                </div>
+              </div>
+
+              <div class="form-group col-md-6">
+                <div class="label-with-help">
+                  <label for="input-renavam">
+                    Código Renavam <span class="required">*</span>
+                  </label>
+                  <button type="button" class="btn-help-link" id="btn-open-help-renavam">
+                    <span class="help-bubble">?</span> Onde encontrar o Renavam?
+                  </button>
+                </div>
+                <div class="input-wrapper">
+                  <input 
+                    type="text" 
+                    id="input-renavam" 
+                    name="renavam" 
+                    placeholder="Ex: 12345678901 (11 dígitos)" 
+                    maxlength="11" 
+                    inputmode="numeric" 
+                    autocomplete="off"
+                    required
+                  >
+                  <span class="input-hint">Número com exatamente 11 dígitos presente no CRLV</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-footer">
+              <button type="button" class="btn-secondary" id="btn-back-to-home">
+                ← Voltar ao Início
+              </button>
+              <button type="submit" class="btn-primary" id="btn-submit-consulta">
+                Consultar Débitos ➔
+              </button>
+            </div>
+          </form>
+
+        </div>
+      </section>
+
+
+
+      <section id="view-extrato" class="screen-view">
+        <nav class="breadcrumbs" aria-label="Navegação estrutural">
+          <button type="button" class="breadcrumb-link" data-goto="view-home">Início</button>
+          <span>&gt;</span>
+          <button type="button" class="breadcrumb-link" data-goto="view-consulta">Consulta</button>
+          <span>&gt;</span>
+          <span class="breadcrumb-current">Extrato de Débitos</span>
+        </nav>
+
+
+        <div class="vehicle-card">
+          <div class="vehicle-info-header">
+            <div>
+              <span class="vehicle-badge">DADOS DO VEÍCULO CONSULTADO</span>
+              <h2 id="veiculo-titulo">FIAT ARGO DRIVE 1.0 (2022/2023)</h2>
+            </div>
+            <div class="vehicle-plate-pill">
+              <span class="plate-brazil-flag">🇧🇷 BRASIL</span>
+              <span class="plate-code" id="veiculo-placa">ABC1D23</span>
+            </div>
+          </div>
+          <div class="vehicle-details-grid">
+            <div class="detail-item">
+              <span class="detail-label">Renavam</span>
+              <span class="detail-val" id="veiculo-renavam">12345678901</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Proprietário</span>
+              <span class="detail-val">Participante Fictício de Teste</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Município / UF</span>
+              <span class="detail-val">Goiânia - GO</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Situação Veicular</span>
+              <span class="detail-val status-alert">Pendências Financeiras</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-card">
+          <div class="page-header with-action">
+            <div>
+              <h3>Débitos Encontrados para o Veículo</h3>
+              <p>Marque os débitos que deseja pagar agora. <strong>A seleção inicial inicia zerada.</strong></p>
+            </div>
+          </div>
+
+
+          <div class="table-responsive">
+            <table class="debitos-table">
+              <thead>
+                <tr>
+                  <th style="width: 50px;">Pagar</th>
+                  <th>Tipo de Débito</th>
+                  <th>Ano / Exercício</th>
+                  <th>Vencimento</th>
+                  <th style="text-align: right;">Valor (R$)</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr class="debito-row" data-id="licenciamento" data-valor="168.60" data-nome="Licenciamento Anual 2026">
+                  <td class="text-center">
+                    <input type="checkbox" class="debito-checkbox" id="check-licenciamento">
+                  </td>
+                  <td>
+                    <label for="check-licenciamento" class="debito-title">
+                      <strong>Licenciamento Anual</strong>
+                      <span class="debito-tag tag-licenciamento">Taxa de Renovação Anual</span>
+                    </label>
+                  </td>
+                  <td>2026</td>
+                  <td>31/10/2026</td>
+                  <td class="text-right debito-val">R$ 168,60</td>
+                </tr>
+
+                <tr class="debito-row" data-id="ipva" data-valor="1250.40" data-nome="IPVA 2026 - Cota Única">
+                  <td class="text-center">
+                    <input type="checkbox" class="debito-checkbox" id="check-ipva">
+                  </td>
+                  <td>
+                    <label for="check-ipva" class="debito-title">
+                      <strong>IPVA 2026 - Cota Única</strong>
+                      <span class="debito-tag tag-ipva">Imposto Estadual</span>
+                    </label>
+                  </td>
+                  <td>2026</td>
+                  <td>15/09/2026</td>
+                  <td class="text-right debito-val">R$ 1.250,40</td>
+                </tr>
+
+                <tr class="debito-row" data-id="multa" data-valor="195.23" data-nome="Multa por Excesso de Velocidade (Autuação 2026)">
+                  <td class="text-center">
+                    <input type="checkbox" class="debito-checkbox" id="check-multa">
+                  </td>
+                  <td>
+                    <label for="check-multa" class="debito-title">
+                      <strong>Multa por Excesso de Velocidade</strong>
+                      <span class="debito-tag tag-multa">Auto Infração: GO-9821</span>
+                    </label>
+                  </td>
+                  <td>2026</td>
+                  <td>20/10/2026</td>
+                  <td class="text-right debito-val">R$ 195,23</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="summary-card">
+            <div class="summary-left">
+              <span class="summary-label">Itens selecionados para quitação:</span>
+              <strong id="summary-items-count">0 débito(s)</strong>
+              <div id="summary-items-list" class="summary-list">Nenhum débito marcado</div>
+            </div>
+            <div class="summary-right">
+              <div class="total-box">
+                <span class="total-label">VALOR TOTAL SELECIONADO:</span>
+                <span class="total-amount" id="summary-total-val">R$ 0,00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-footer">
+            <button type="button" class="btn-secondary" id="btn-back-to-consulta">
+              ← Nova Consulta
+            </button>
+            <button type="button" class="btn-primary" id="btn-goto-revisao" disabled>
+              Continuar para Pagamento ➔
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+
+      <section id="view-revisao" class="screen-view">
+        <nav class="breadcrumbs" aria-label="Navegação estrutural">
+          <button type="button" class="breadcrumb-link" data-goto="view-home">Início</button>
+          <span>&gt;</span>
+          <button type="button" class="breadcrumb-link" data-goto="view-extrato">Extrato</button>
+          <span>&gt;</span>
+          <span class="breadcrumb-current">Revisão de Pagamento</span>
+        </nav>
+
+        <div class="page-card narrow-card">
+          <div class="page-header">
+            <h2>Revisão e Confirmação de Débitos</h2>
+            <p>Confira cuidadosamente os débitos selecionados e o valor total antes de emitir a guia de pagamento.</p>
+          </div>
+
+          <div class="review-box">
+            <div class="review-row">
+              <span class="review-label">Veículo / Placa:</span>
+              <span class="review-value"><strong>FIAT ARGO DRIVE 1.0 (Placa: ABC1D23)</strong></span>
+            </div>
+            <div class="review-row">
+              <span class="review-label">Renavam:</span>
+              <span class="review-value">12345678901</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="review-items-title">
+              <strong>Débito(s) Selecionado(s) para Pagamento:</strong>
+            </div>
+
+            <ul id="revisao-lista-debitos" class="review-debitos-list">
+
+              <li class="review-item">
+                <span>Licenciamento Anual 2026</span>
+                <strong>R$ 168,60</strong>
+              </li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <div class="review-total-row">
+              <span>Valor Total da Guia:</span>
+              <span class="review-total-value" id="revisao-total-val">R$ 168,60</span>
+            </div>
+          </div>
+
+
+          <div class="payment-method-box">
+            <h4>Selecione o Método de Pagamento:</h4>
+            <div class="method-options">
+              <label class="method-option-card selected">
+                <input type="radio" name="forma_pagamento" value="pix" checked>
+                <div class="method-content">
+                  <div class="method-header">
+                    <span class="method-icon">⚡</span>
+                    <strong>Pix (Compensação Imediata)</strong>
+                    <span class="method-badge">Recomendado</span>
+                  </div>
+                  <small>Gere o QR Code ou Copia e Cola para pagar pelo aplicativo do seu banco em poucos segundos.</small>
+                </div>
+              </label>
+
+              <label class="method-option-card disabled-method" title="Opção indisponível para este teste">
+                <input type="radio" name="forma_pagamento" value="boleto" disabled>
+                <div class="method-content">
+                  <div class="method-header">
+                    <span class="method-icon">📄</span>
+                    <strong>Boleto Bancário (DUA)</strong>
+                  </div>
+                  <small>Compensação em até 48 horas úteis (não recomendado para baixa imediata).</small>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-footer">
+            <button type="button" class="btn-secondary" id="btn-back-to-extrato">
+              ← Alterar Seleção de Débitos
+            </button>
+            <button type="button" class="btn-primary btn-success-action" id="btn-gerar-pix">
+              Gerar Pix para Pagamento ⚡
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section id="view-pix" class="screen-view">
+        <nav class="breadcrumbs" aria-label="Navegação estrutural">
+          <button type="button" class="breadcrumb-link" data-goto="view-home">Início</button>
+          <span>&gt;</span>
+          <button type="button" class="breadcrumb-link" data-goto="view-revisao">Revisão</button>
+          <span>&gt;</span>
+          <span class="breadcrumb-current">Pagamento Pix</span>
+        </nav>
+
+
+        <div class="page-card narrow-card" id="pix-container-card">
+
+
+          <div id="pix-state-pending" class="pix-state-block">
+
+            <div class="status-banner status-pending" role="status">
+              <div class="status-icon-bubble">⏳</div>
+              <div class="status-info">
+                <span class="status-tag">STATUS DA TRANSAÇÃO</span>
+                <h3 class="status-title">Aguardando Pagamento</h3>
+                <p class="status-desc">O pagamento <strong>ainda NÃO foi concluído</strong>. O DETRAN-GO está aguardando a compensação bancária do Pix.</p>
+              </div>
+            </div>
+
+            <div class="pix-summary-header">
+              <div class="pix-val-box">
+                <span class="label">Valor a Pagar:</span>
+                <span class="val" id="pix-display-val">R$ 168,60</span>
+                <small class="debt-ref" id="pix-display-debt">Licenciamento Anual 2026 (Placa: ABC1D23)</small>
+              </div>
+              <div class="pix-timer-box">
+                <span class="timer-label">Válido por:</span>
+                <span class="timer-clock" id="pix-countdown">14:59 min</span>
+              </div>
+            </div>
+
+
+            <div class="qrcode-wrapper">
+              <div class="qrcode-box" id="qrcode-box">
+
+                <svg class="qrcode-svg" viewBox="0 0 200 200" width="180" height="180" aria-label="Código QR Pix">
+                  <rect width="200" height="200" fill="#ffffff"/>
+
+                  <rect x="10" y="10" width="40" height="40" fill="#000000"/>
+                  <rect x="15" y="15" width="30" height="30" fill="#ffffff"/>
+                  <rect x="20" y="20" width="20" height="20" fill="#000000"/>
+
+                  <rect x="150" y="10" width="40" height="40" fill="#000000"/>
+                  <rect x="155" y="15" width="30" height="30" fill="#ffffff"/>
+                  <rect x="160" y="20" width="20" height="20" fill="#000000"/>
+
+                  <rect x="10" y="150" width="40" height="40" fill="#000000"/>
+                  <rect x="15" y="155" width="30" height="30" fill="#ffffff"/>
+                  <rect x="20" y="160" width="20" height="20" fill="#000000"/>
+
+
+                  <g fill="#1a1a1a">
+                    <rect x="60" y="15" width="10" height="10"/>
+                    <rect x="80" y="15" width="10" height="10"/>
+                    <rect x="100" y="25" width="10" height="10"/>
+                    <rect x="120" y="15" width="10" height="10"/>
+                    <rect x="60" y="35" width="10" height="10"/>
+                    <rect x="90" y="45" width="10" height="10"/>
+                    <rect x="110" y="35" width="10" height="10"/>
+                    <rect x="130" y="45" width="10" height="10"/>
+                    <rect x="20" y="65" width="10" height="10"/>
+                    <rect x="40" y="75" width="10" height="10"/>
+                    <rect x="60" y="65" width="10" height="10"/>
+                    <rect x="80" y="75" width="10" height="10"/>
+                    <rect x="100" y="65" width="10" height="10"/>
+                    <rect x="120" y="75" width="10" height="10"/>
+                    <rect x="140" y="65" width="10" height="10"/>
+                    <rect x="160" y="75" width="10" height="10"/>
+                    <rect x="180" y="65" width="10" height="10"/>
+                    <rect x="30" y="95" width="10" height="10"/>
+                    <rect x="50" y="85" width="10" height="10"/>
+                    <rect x="70" y="95" width="10" height="10"/>
+                    <rect x="130" y="95" width="10" height="10"/>
+                    <rect x="150" y="85" width="10" height="10"/>
+                    <rect x="170" y="95" width="10" height="10"/>
+                    <rect x="20" y="115" width="10" height="10"/>
+                    <rect x="40" y="125" width="10" height="10"/>
+                    <rect x="60" y="115" width="10" height="10"/>
+                    <rect x="80" y="125" width="10" height="10"/>
+                    <rect x="100" y="115" width="10" height="10"/>
+                    <rect x="120" y="125" width="10" height="10"/>
+                    <rect x="140" y="115" width="10" height="10"/>
+                    <rect x="160" y="125" width="10" height="10"/>
+                    <rect x="60" y="145" width="10" height="10"/>
+                    <rect x="80" y="155" width="10" height="10"/>
+                    <rect x="100" y="145" width="10" height="10"/>
+                    <rect x="120" y="155" width="10" height="10"/>
+                    <rect x="60" y="175" width="10" height="10"/>
+                    <rect x="90" y="165" width="10" height="10"/>
+                    <rect x="110" y="175" width="10" height="10"/>
+                    <rect x="130" y="165" width="10" height="10"/>
+                    <rect x="150" y="175" width="10" height="10"/>
+                    <rect x="170" y="165" width="10" height="10"/>
+                  </g>
+
+                  <circle cx="100" cy="100" r="18" fill="#006633"/>
+                  <text x="100" y="105" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">PIX</text>
+                </svg>
+              </div>
+              <p class="qrcode-caption">Aponte a câmera do seu aplicativo bancário para o QR Code acima</p>
+            </div>
+
+            <div class="pix-copia-cola-box">
+              <label for="pix-code-input" class="copia-cola-label">
+                <strong>Ou use a opção "Pix Copia e Cola":</strong>
+              </label>
+              <div class="copy-input-group">
+                <input 
+                  type="text" 
+                  id="pix-code-input" 
+                  readonly 
+                  value="00020126580014br.gov.bcb.pix0136detran-go-licenciamento-2026-168605204000053039865405168.605802BR5920DETRAN GOIAS ARREC6007GOIANIA62070503***63048D2A"
+                >
+                <button type="button" class="btn-copy-pix" id="btn-copy-pix">
+                  📋 Copiar Código Pix
+                </button>
+              </div>
+              <div class="copy-feedback-msg" id="copy-feedback-msg" style="display: none;">
+                ✅ Código copiado com sucesso! Abra o app do seu banco e cole no campo "Pix Copia e Cola".
+              </div>
+            </div>
+
+
+            <div class="pix-instructions">
+              <h4>Passo a passo para pagamento:</h4>
+              <ol>
+                <li>Abra o aplicativo do seu banco ou carteira digital.</li>
+                <li>Selecione a opção <strong>Pix</strong> e em seguida <strong>Pagar com QR Code</strong> ou <strong>Pix Copia e Cola</strong>.</li>
+                <li>Confira se o favorecido é <strong>DETRAN GOIAS / ARRECADAÇÃO ESTADUAL</strong>.</li>
+                <li>Confirme a operação. Esta página será atualizada automaticamente assim que o pagamento for processado.</li>
+              </ol>
+            </div>
+
+
+            <div class="pix-simulacao-box">
+              <span class="simulacao-tag">SIMULAÇÃO DE TESTE</span>
+              <p>Após conferir o código Pix, clique abaixo para simular a confirmação e pular para o comprovante:</p>
+              <button type="button" class="btn-confirm-pix-screen" id="btn-pix-confirm-screen">
+                ✓ Confirmar Pagamento e Ver Comprovante ➔
+              </button>
+            </div>
+          </div>
+
+
+  
+          <div id="pix-state-expired" class="pix-state-block" style="display: none;">
+            <div class="status-banner status-expired" role="alert">
+              <div class="status-icon-bubble">❌</div>
+              <div class="status-info">
+                <span class="status-tag">STATUS DA TRANSAÇÃO</span>
+                <h3 class="status-title">Código Pix Expirado!</h3>
+                <p class="status-desc">O tempo limite para pagamento deste código se esgotou. <strong>O débito NÃO foi pago.</strong></p>
+              </div>
+            </div>
+
+            <div class="expired-card-content">
+              <div class="expired-icon-large">⏰</div>
+              <h3>O código gerado anteriormente perdeu a validade</h3>
+              <p>Por medidas de segurança bancária, os códigos Pix para arrecadação possuem validade temporária. Para concluir a quitação de <strong>Licenciamento Anual (R$ 168,60)</strong>, gere um novo código.</p>
+
+              <div class="expired-action-area">
+                <button type="button" class="btn-primary btn-renew-pix" id="btn-renew-pix">
+                  🔄 Gerar Novo Código Pix
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div id="pix-state-confirmed" class="pix-state-block" style="display: none;">
+            <div class="status-banner status-confirmed" role="alert">
+              <div class="status-icon-bubble">✅</div>
+              <div class="status-info">
+                <span class="status-tag">STATUS DA TRANSAÇÃO</span>
+                <h3 class="status-title">Pagamento Confirmado com Sucesso!</h3>
+                <p class="status-desc">A compensação bancária foi recebida e registrada pelo sistema do DETRAN-GO.</p>
+              </div>
+            </div>
+
+
+            <div class="comprovante-box" id="comprovante-oficial">
+              <div class="comprovante-header">
+                <div class="comp-logo">
+                  <strong>DETRAN-GO</strong>
+                  <small>Governo do Estado de Goiás</small>
+                </div>
+                <div class="comp-seal">
+                  <span>AUTENTICAÇÃO DIGITAL</span>
+                  <strong id="comp-auth-code">GO-2026-1027-9942-8812</strong>
+                </div>
+              </div>
+
+              <h3 class="comp-title">COMPROVANTE DE ARRECADAÇÃO E QUITAÇÃO DE DÉBITO</h3>
+
+              <div class="comp-grid">
+                <div class="comp-item">
+                  <span class="c-label">Veículo / Placa:</span>
+                  <span class="c-val"><strong>FIAT ARGO DRIVE 1.0 (ABC1D23)</strong></span>
+                </div>
+                <div class="comp-item">
+                  <span class="c-label">Renavam:</span>
+                  <span class="c-val">12345678901</span>
+                </div>
+                <div class="comp-item">
+                  <span class="c-label">Débito Quitado:</span>
+                  <span class="c-val"><strong>Licenciamento Anual 2026</strong></span>
+                </div>
+                <div class="comp-item">
+                  <span class="c-label">Valor Pago:</span>
+                  <span class="c-val font-green"><strong id="comp-valor-pago">R$ 168,60</strong></span>
+                </div>
+                <div class="comp-item">
+                  <span class="c-label">Data / Hora da Quitação:</span>
+                  <span class="c-val" id="comp-data-hora">27/10/2026 às 21:50:12</span>
+                </div>
+                <div class="comp-item">
+                  <span class="c-label">Forma de Pagamento:</span>
+                  <span class="c-val">Pix Instantâneo (Banco Arrecadador BB/Caixa)</span>
+                </div>
+                <div class="comp-item full-width">
+                  <span class="c-label">Situação no RENAVAM:</span>
+                  <span class="c-val status-ok">Taxa regularizada. CRLV-e liberado para download.</span>
+                </div>
+              </div>
+
+              <div class="comp-footer-notes">
+                <small>* Este documento é uma simulação de quitação para fins do teste de usabilidade (Fase 6).</small>
+              </div>
+            </div>
+
+            <div class="comp-actions">
+              <button type="button" class="btn-secondary" onclick="window.print()">
+                🖨️ Imprimir Comprovante
+              </button>
+              <button type="button" class="btn-primary" id="btn-comprovante-home">
+                🏠 Concluir e Voltar ao Início
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+
+
+  <div id="modal-renavam-help" class="modal-backdrop" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="modal-renavam-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modal-renavam-title">
+          <span class="modal-icon">📄</span> Onde localizar o Renavam no documento do veículo?
+        </h3>
+        <button type="button" class="modal-close-btn" id="btn-close-modal-x" aria-label="Fechar janela de ajuda">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <p class="modal-intro">
+          O <strong>Renavam</strong> (Registro Nacional de Veículos Automotores) é o número de identificação único do seu automóvel. Ele possui <strong>11 dígitos</strong> e pode ser encontrado em seu documento (tanto no modelo digital quanto no impresso em papel moeda).
+        </p>
+
+
+        <div class="crlv-mockup">
+          <div class="crlv-header">
+            <span>REPÚBLICA FEDERATIVA DO BRASIL</span>
+            <strong>CERTIFICADO DE REGISTRO E LICENCIAMENTO DE VEÍCULO - DIGITAL (CRLV-e)</strong>
+          </div>
+          
+          <div class="crlv-grid">
+
+            <div class="crlv-cell highlighted-field">
+              <span class="crlv-tag">CAMPO 1 (Canto Superior Esquerdo)</span>
+              <span class="crlv-field-name">CÓDIGO RENAVAM:</span>
+              <strong class="crlv-field-value renavam-highlight">12345678901</strong>
+              <span class="crlv-arrow-pointer">👈 O RENAVAM ESTÁ AQUI (11 DÍGITOS)</span>
+            </div>
+
+            <div class="crlv-cell">
+              <span class="crlv-field-name">PLACA:</span>
+              <strong class="crlv-field-value">ABC1D23</strong>
+            </div>
+
+            <div class="crlv-cell">
+              <span class="crlv-field-name">CHASSI:</span>
+              <span class="crlv-field-value">9BWZZZ377VT004128</span>
+            </div>
+
+            <div class="crlv-cell">
+              <span class="crlv-field-name">ANO FAB/MOD:</span>
+              <span class="crlv-field-value">2022 / 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-tip-box">
+          <span class="tip-icon">💡</span>
+          <div>
+            <strong>Dica Importante:</strong>
+            <p>Se o documento for mais antigo e o número tiver menos de 11 dígitos na impressão física, o sistema necessita dos zeros à esquerda para totalizar 11 números (Ex: 00123456789).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn-primary" id="btn-close-modal-return">
+          ✓ Entendi! Retornar à Consulta
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast-popup" role="status" aria-live="polite">
+    <span class="toast-icon">✓</span>
+    <span class="toast-text" id="toast-text">Mensagem de confirmação</span>
+  </div>
+
+  <div class="test-controls-corner" id="test-controls-corner">
+    <button type="button" id="btn-quick-confirm" class="btn-small-confirm" title="Confirmar pagamento e pular imediatamente para o comprovante">
+      ✓ Confirmar Pagamento
+    </button>
+    <button type="button" id="btn-quick-expire" class="btn-small-expire" title="Simular expiração do código Pix (T6)">
+      ⏰ Expirar Pix
+    </button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
